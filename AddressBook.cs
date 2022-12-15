@@ -103,5 +103,22 @@ namespace AddressBook
                 }
             }
         }
+        public void RemoveContact()
+        {
+            Console.WriteLine("Enter the Firstname of the person you would like to remove.");
+            string Remove = Console.ReadLine();
+            foreach (var record in data.ToList())
+            {
+                if (record.Firstname.ToUpper() == Remove.ToUpper())
+                {
+                    data.Remove(record);
+                    Console.WriteLine("Contact is deleted");
+                }
+                else
+                {
+                    Console.WriteLine("Contact is not present");
+                }
+            }
+        }
     }
 }

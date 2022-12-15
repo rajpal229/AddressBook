@@ -7,7 +7,7 @@
             AddressBook addressbook = new AddressBook();
             while (true)
             {
-                Console.WriteLine("1 Create contact \n2 Display Contact\n3 Edit Contact");
+                Console.WriteLine("1 Create contact \n2 Display Contact\n3 Edit Contact\n4 Remove Contact");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -19,6 +19,9 @@
                         break;
                     case 3:
                         addressbook.EditContact();
+                        break;
+                    case 4:
+                        addressbook.RemoveContact();
                         break;
                     default:
                         Console.WriteLine("Enter Valid option");
